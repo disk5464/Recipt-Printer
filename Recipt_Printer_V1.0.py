@@ -2,6 +2,7 @@
 #Libary Documentation: https://python-escpos.readthedocs.io/en/latest/user/methods.html
 #                      https://winslowjosiah.com/blog/2024/08/27/i-got-a-receipt-printer/
 #                      https://www.youtube.com/watch?v=7KtyekivpRM
+#                      https://en.wikipedia.org/wiki/Block_Elements
 ###############################################################################
 #Import the libaries
 import streamlit as st
