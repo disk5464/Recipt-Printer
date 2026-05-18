@@ -3,6 +3,7 @@
 #                      https://winslowjosiah.com/blog/2024/08/27/i-got-a-receipt-printer/
 #                      https://www.youtube.com/watch?v=7KtyekivpRM
 #                      https://en.wikipedia.org/wiki/Block_Elements
+#                      https://medium.com/@dongaresuyash/dockerizing-your-streamlit-app-a-beginner-friendly-guide-b63d1214d0ad
 ###############################################################################
 #Import the libaries
 import streamlit as st
@@ -20,7 +21,8 @@ if text_input:
     st.write("Info sent to printer: ", text_input)
     
     #Set the defaults for the printer. This is so that the printer is reset back to a known baseline
-    kitchen = Network("192.168.1.176", profile="TM-T88V") 
+    #kitchen = Network("192.168.1.176", profile="TM-T88V") 
+    kitchen = Network("10.0.0.67", profile="TM-T88V") 
     kitchen.set(align="left", bold=False, double_width=False)
     
     #Set the setting for the header, then print it
