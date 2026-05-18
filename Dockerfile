@@ -7,4 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 8505
 
+CMD ["streamlit", "run", "Recipt_Printer_V1.0.py", "--server.port=8505", "--server.address=0.0.0.0"]
+
 #https://medium.com/@dongaresuyash/dockerizing-your-streamlit-app-a-beginner-friendly-guide-b63d1214d0ad
