@@ -1,2 +1,3 @@
 streamlit
-python-escpos
+#python-escpos
+escpos
