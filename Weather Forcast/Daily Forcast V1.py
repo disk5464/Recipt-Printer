@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw
 ###############################################
 #Set up the headers and endpoint for the API
 headers = {'User-Agent' : 'myapp'}
-endpoint = 'https://api.weather.gov/gridpoints/LWX/39.7456,-97.0892/forecast'
+endpoint = 'https://api.weather.gov/gridpoints/LWX/116,84/forecast'
 
 #Send out the request and store the response as Json, then filter it into a smaller dict
 response = requests.get(endpoint, headers = headers)

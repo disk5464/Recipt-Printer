@@ -33,7 +33,7 @@ def make_icon(kind, size=100):
         d.ellipse([cx - 5, cy - 15, cx + 20, cy + 12], fill=0)
         d.ellipse([cx + 5, cy - 2, cx + 25, cy + 16], fill=0)
 
-    elif kind == "rain":
+    elif kind == "rain" or kind == "showers":
         d.ellipse([cx - 22, cy - 18, cx + 2, cy + 2], fill=0)
         d.ellipse([cx - 5, cy - 28, cx + 20, cy - 1], fill=0)
         d.ellipse([cx + 5, cy - 15, cx + 25, cy + 3], fill=0)
