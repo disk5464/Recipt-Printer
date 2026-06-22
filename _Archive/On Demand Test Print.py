@@ -7,7 +7,7 @@
 from escpos.printer import Network
 ###############################################################################
 #Define the printer's IP and the profile which is just the model number
-kitchen = Network("192.168.1.176", profile="TM-T88V") 
+kitchen = Network("192.168.50.102", profile="TM-T88V") 
 
 #Set the alignment, just incase it was set to something else on the last run
 kitchen.set(align="left")
