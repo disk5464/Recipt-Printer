@@ -21,7 +21,7 @@ if text_input:
     st.write("Info sent to printer: ", text_input)
     
     #Set the defaults for the printer. This is so that the printer is reset back to a known baseline
-    kitchen = Network("192.168.50.102", profile="TM-T88V") 
+    kitchen = Network("10.0.0.67", profile="TM-T88V") 
     kitchen.set(align="left", bold=False, double_width=False)
     
     #Set the setting for the header, then print it
