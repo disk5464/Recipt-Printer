@@ -62,11 +62,10 @@ def make_icon(kind, size=100):
     return img
 
 ##############################################################################
-#Define the printer IP and model. Also set the text alignment / font.
+#Define the printer IP and model.
 kitchenPrinter = Network("192.168.50.102", profile="TM-T88V")
-kitchenPrinter.set(align="left", bold=False, double_width=False)
 
-###############################################
+###############################################################################
 #Set up the headers and endpoint for the API
 headers = {'User-Agent' : 'myapp'}
 endpoint = 'https://api.weather.gov/gridpoints/LWX/116,84/forecast'
@@ -88,13 +87,23 @@ elif "showers" in todaysweather['shortForecast'].lower() or "rain" in todaysweat
 elif "snow" in todaysweather['shortForecast'].lower():
     icon = make_icon("snow")
 
-#Send the weather info we want to print to the printer
+###############################################################################
+#Set it so that the title and image are centered and bold.
+kitchenPrinter.set(align="center", bold=True, double_width=True)
+
+kitchenPrinter.text(f"Today's Weather\n\n")
 kitchenPrinter.image(icon, center=True)
-kitchenPrinter.text(f"{todaysweather['shortForecast']}\n")
-kitchenPrinter.text(f"Temperature: {todaysweather['temperature']} F\n")
-kitchenPrinter.text(f"Chance of Rain: {todaysweather['probabilityOfPrecipitation']['value']}%\n")
-kitchenPrinter.text(f"Wind: {todaysweather['windSpeed']}\n")
-#kitchenPrinter.text(f"Detailed Forecast: {todaysweather['detailedForecast']}\n")
+
+#Change the alignment to left and leave bold on for the main body text.
+kitchenPrinter.set(align="left")
+kitchenPrinter.text(f"{todaysweather['shortForecast']}\n\n")
+kitchenPrinter.text(f"Temperature: {todaysweather['temperature']} F\n\n")
+kitchenPrinter.text(f"Chance of Rain: {todaysweather['probabilityOfPrecipitation']['value']}%\n\n")
+kitchenPrinter.text(f"Wind: {todaysweather['windSpeed']}\n\n")
+
+#Turn off bold for the detailed forecast.
+kitchenPrinter.set(bold=False, custom_size=True, width=1, height=1)
+kitchenPrinter.text(f"Detailed Forecast: {todaysweather['detailedForecast']}\n")
 
 ###############################################################################
 #Cut the paper
