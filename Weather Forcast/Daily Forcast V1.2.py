@@ -95,7 +95,7 @@ kitchenPrinter.text(f"Today's Weather\n\n")
 kitchenPrinter.image(icon, center=True)
 
 #Change the alignment to left and leave bold on for the main body text.
-kitchenPrinter.set(align="left")
+kitchenPrinter.set(align="left", bold=True, double_width=True)
 kitchenPrinter.text(f"{todaysweather['shortForecast']}\n\n")
 kitchenPrinter.text(f"Temperature: {todaysweather['temperature']} F\n\n")
 kitchenPrinter.text(f"Chance of Rain: {todaysweather['probabilityOfPrecipitation']['value']}%\n\n")
