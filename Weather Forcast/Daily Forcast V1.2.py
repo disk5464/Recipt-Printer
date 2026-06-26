@@ -2,7 +2,7 @@
 #Created by: Disk5464
 #Version 1.0: Inital Commit
 #Version 1.1: Added the printer portion, Added comments, Changed the name of the printer
-#Version 1.2: Added in emoticon support via  
+#Version 1.2: Added in an icon for the weather. Polished up the formatting. 
 ###############################################################################
 #Import the libaries
 import requests
